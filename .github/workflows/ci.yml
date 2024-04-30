@@ -1,0 +1,67 @@
+# as we mentioned in issue description had a workflow
+# like this when developer push or open merge request on branch dev
+# is the last check an monitoring code in development process
+# @link [see doc](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions)
+# TODO:
+# !we need add CD workflow for deployment flow
+# !but in private mode git i can't use pages to deploy the app
+# !if you want we can public the repo and check CD flow either
+
+name: CI
+on:
+  push:
+    branches:
+      - dev
+
+  pull_request:
+    branches:
+      - dev
+
+jobs:
+  lint: # first run lint like commit-rule to sure syntax-rules are passed successfully
+    runs-on: ubuntu-latest
+    steps: # use pre-defined hooks in github market
+      - uses: actions/checkout@v4 # [checkout](https://github.com/marketplace/actions/checkout)
+      - uses: pnpm/action-setup@v3 # [pnpm](https://github.com/marketplace/actions/setup-pnpm)
+      - uses: actions/setup-node@v4 # [node](https://github.com/marketplace/actions/setup-node-js-environment)
+        with:
+          node-version: lts/*
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install
+
+      - name: Lint
+        run: pnpm lint # this command
+
+  typecheck: # then typecheck to sure typescript lint are passed successfully
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install
+
+      - name: Typecheck
+        run: pnpm typecheck # this command
+
+  build: # then build app just for check build process is passed successfully
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install
+
+      - name: build
+        run: pnpm build # this command
