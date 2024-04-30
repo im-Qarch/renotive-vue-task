@@ -1,0 +1,6 @@
+{
+    "_comment": "The .czrc file is used to configure the Commitizen command-line utility (cz)",
+    "_comment_1": "which helps developers create standardized commit messages following a specific format",
+    "_comment_2": "In the context of a Vue app, the cz-conventional-changelog adapter is commonly used to enforce the conventional commit message format.",
+    "path": "./node_modules/cz-conventional-changelog"
+}
