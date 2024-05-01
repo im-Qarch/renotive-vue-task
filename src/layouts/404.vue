@@ -6,12 +6,12 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <main class="grid h-full min-h-full place-items-center bg-white px-6 py-24 lg:px-8 sm:py-32">
+  <main class="grid h-full min-h-full place-items-center bg-white px-6 py-24 dark:bg-gray-900 lg:px-8 sm:py-32">
     <div class="text-center">
       <p class="text-base text-primary-600 font-semibold">
         404
       </p>
-      <h1 class="mt-4 text-3xl text-gray-900 font-bold tracking-tight sm:text-5xl">
+      <h1 class="mt-4 text-3xl text-gray-900 font-bold tracking-tight sm:text-5xl dark:text-white">
         {{ t('page_not_found') }}
       </h1>
       <p class="mt-6 text-base text-gray-600 leading-7">

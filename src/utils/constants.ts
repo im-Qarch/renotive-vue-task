@@ -10,12 +10,7 @@ export const ROUTES_NAME: Record<string, string> = {
   NOTFOUND: 'not-found',
 }
 
-export const LANGUAGE: Record<string, string> = {
-  en: 'English',
-  fa: 'Persian - فارسی',
-}
-
 export const ALL_LANGUAGES: Record<string, string>[] = [
   { value: 'en', label: 'English' },
-  { value: 'fa', label: 'Persian - فارسی' },
+  { value: 'de', label: 'German' },
 ]

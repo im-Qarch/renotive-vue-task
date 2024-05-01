@@ -63,7 +63,7 @@ Then run a clean-install and build the project:
 
 ```sh
 pnpm install --frozen-lockfile
-pnpm build-only
+pnpm build
 ```
 
 Now you should see a `/dir` directory in project's root. This directory contains all the files required to deploy and run this project. See [Deploy](#deploy) for more details on how to deploy it on a server.

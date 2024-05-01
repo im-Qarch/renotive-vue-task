@@ -27,7 +27,7 @@ useHead({
     },
   ],
   htmlAttrs: {
-    dir: ['ar', 'fa'].includes(useAppStore().language) ? 'rtl' : 'ltr',
+    dir: 'ltr',
     lang: (useAppStore().language as string) || 'en',
   },
 })
