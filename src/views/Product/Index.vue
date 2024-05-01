@@ -95,7 +95,7 @@ watch(
           <!-- Add -->
           <button
             type="button"
-            class="relative flex grow items-center justify-center border border-transparent rounded-md bg-gray-100 px-8 py-2 text-sm text-gray-900 font-medium dark:bg-gray-800 hover:bg-gray-200 dark:text-gray-100 dark:hover:bg-gray-900"
+            class="relative flex grow items-center justify-center border border-transparent rounded-md bg-gray-100 py-2 text-sm text-gray-900 font-medium dark:bg-gray-800 hover:bg-gray-200 dark:text-gray-100 dark:hover:bg-gray-900"
             @click="useAppStore().addProduct(product)"
           >
             <Icon icon="solar:add-circle-line-duotone" class="mr-2 h-5 w-5" />
@@ -110,7 +110,7 @@ watch(
             class="relative flex items-center justify-center border border-transparent rounded-md bg-red-100 px-3 py-2 text-sm text-red-900 font-medium hover:bg-red-200"
             @click="useAppStore().removeProduct(product)"
           >
-            <Icon icon="solar:trash-bin-2-bold-duotone" class="h-5 w-5" />
+            <Icon icon="solar:minus-square-line-duotone" class="h-5 w-5" />
           </button>
         </div>
       </div>

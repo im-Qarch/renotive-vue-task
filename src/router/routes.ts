@@ -24,6 +24,14 @@ const routes: Array<RouteRecordRaw> = [
         path: '/product-list',
         component: () => import('@/views/Product/Index.vue'),
       },
+      /**
+       * Shopping Cart
+       */
+      {
+        name: ROUTES_NAME.SHOPPING_CART,
+        path: '/shopping-cart',
+        component: () => import('@/views/Cart/Index.vue'),
+      },
     ],
   },
   /**

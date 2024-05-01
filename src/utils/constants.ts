@@ -4,9 +4,11 @@
  * ?i know that you know but it is what it is :).
  */
 
+// !We make all routes names constant so we can smoothly change every time we want the naming without changes in the code
 export const ROUTES_NAME: Record<string, string> = {
   DEFAULT: 'default',
   PRODUCT_LIST: 'product-list',
+  SHOPPING_CART: 'shopping-cart',
   NOTFOUND: 'not-found',
 }
 

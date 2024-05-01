@@ -40,6 +40,23 @@ Then install dependencies with clear flag:
 pnpm install
 ```
 
+<div style="background-color: #b33c37;color: #ffffff; padding: 10px;margin:30px 0px; border-radius: 5px;">
+
+**Attention:**
+Because this repo is for testing and we do have no deployment flow
+and I respected to standards, so please be sure you have `.env.local` file in the root which contain
+
+```sh
+VITE_BASE_URL=http://localhost:3000
+VITE_API_URL=https://dummyjson.com
+VITE_COOKIE_DOMAIN=localhost
+VITE_HEADER_BG=F43F5E
+```
+
+> if not exist please create it
+
+</div>
+
 And run local dev server:
 
 ```
