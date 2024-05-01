@@ -4,6 +4,12 @@
  * ?i know that you know but it is what it is :).
  */
 
+export const ROUTES_NAME: Record<string, string> = {
+  DEFAULT: 'default',
+  PRODUCT_LIST: 'product-list',
+  NOTFOUND: 'not-found',
+}
+
 export const LANGUAGE: Record<string, string> = {
   en: 'English',
   fa: 'Persian - فارسی',

@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { loadLanguageAsync } from '@/plugins/i18n.plugin'
 
-const { t } = useI18n()
-
 onBeforeMount(() => {
   loadLanguageAsync(useAppStore().language || 'en')
 })
@@ -36,8 +34,8 @@ useHead({
 </script>
 
 <template>
-  <div class="main_container">
-    {{ t('hi') }}
+  <div class="h-full w-full">
+    <RouterView />
   </div>
 </template>
 
