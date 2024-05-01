@@ -7,3 +7,8 @@ loading: Loading ...
 add_to_cart: Add to cart
 total_cost: Total cost
 product: Product
+shopping_Cart: Shopping Cart
+remove: Remove
+subtotal: Subtotal
+shipping_taxes_checkout: Shipping and taxes will be calculated at checkout.
+continue_shopping: Continue Shopping

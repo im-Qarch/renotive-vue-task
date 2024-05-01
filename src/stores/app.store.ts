@@ -14,6 +14,7 @@ export const useAppStore = defineStore({
     totalCount: state => state.selected_products.reduce((accumulator: number, product: typeof Product) => {
       return accumulator + +product.quantity || 0
     }, 0) || 0,
+
     totalPrice: state => state.selected_products.reduce((accumulator: number, product: typeof Product) => {
       return accumulator + (+product.price * +product.quantity) || 0
     }, 0) || 0,
@@ -37,6 +38,7 @@ export const useAppStore = defineStore({
         this.selected_products.push({ ...product, ...{ quantity: 1 } })
       }
     },
+
     removeProduct(product: typeof Product) {
       // minus -1 from quantity
       this.selected_products = this.selected_products.map((p: typeof Product) => {
@@ -46,6 +48,11 @@ export const useAppStore = defineStore({
       // check if quantity 0 remove from list
       }).filter((p: typeof Product) => !!p?.quantity)
     },
+
+    fullDeleteProduct(product: typeof Product) {
+      this.selected_products = this.selected_products.filter((p: typeof Product) => p?.id !== product?.id)
+    },
+
     clearAll() {
       this.$reset()
     },

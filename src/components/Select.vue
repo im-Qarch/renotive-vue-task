@@ -44,7 +44,7 @@ const model = computed({
   <div class="relative">
     <select
       v-model="model"
-      class="block w-max border-gray-300 rounded-md py-2 pl-3 pr-10 text-base focus:border-blue-300 sm:text-sm focus:outline-none focus:ring"
+      class="block w-max border-gray-300 rounded-md py-2 pl-3 pr-4 text-base focus:border-blue-300 sm:text-sm focus:outline-none focus:ring"
       @select="model = $event as unknown as string | number"
     >
       <option v-for="(option, index) in options" :key="index" :value="option.value">
