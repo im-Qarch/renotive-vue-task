@@ -34,9 +34,7 @@ useHead({
 </script>
 
 <template>
-  <div class="h-full w-full">
-    <RouterView />
-  </div>
+  <RouterView />
 </template>
 
 <style lang="postcss" scoped>

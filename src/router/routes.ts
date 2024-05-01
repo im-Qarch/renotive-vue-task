@@ -13,7 +13,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     name: ROUTES_NAME.DEFAULT,
     path: '/',
-    redirect: '/',
+    redirect: '/product-list',
     component: () => import('@/layouts/Default.vue'),
     children: [
       /**
@@ -21,7 +21,7 @@ const routes: Array<RouteRecordRaw> = [
        */
       {
         name: ROUTES_NAME.PRODUCT_LIST,
-        path: '/',
+        path: '/product-list',
         component: () => import('@/views/Product/Index.vue'),
       },
     ],
