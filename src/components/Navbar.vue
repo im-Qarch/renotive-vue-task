@@ -54,7 +54,10 @@ function updateLanguage(language: string | number) {
               class="inline-flex items-center gap-x-2 rounded-md bg-primary-600 px-3.5 py-1.5 text-sm text-white font-semibold shadow-sm hover:bg-primary-500 focus-visible:outline-2 focus-visible:outline-primary-600 focus-visible:outline-offset-2 focus-visible:outline"
             >
               <Icon icon="solar:bag-3-line-duotone" class="h-6 w-6 -ml-0.5" />
-              0
+              <span v-if="useAppStore().selected_products?.length">
+                {{ useAppStore().totalCount }} {{ t('product') }} -
+                {{ t('total_cost') }} : {{ `${(useAppStore().totalPrice).toLocaleString('en-GB')} $` }}
+              </span>
             </button>
           </div>
           <!-- Language -->

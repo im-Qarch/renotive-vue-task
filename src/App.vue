@@ -36,9 +36,3 @@ useHead({
 <template>
   <RouterView />
 </template>
-
-<style lang="postcss" scoped>
-.main_container {
-  @apply h-screen w-full text-2xl font-bold p-16 text-white bg-primary;
-}
-</style>

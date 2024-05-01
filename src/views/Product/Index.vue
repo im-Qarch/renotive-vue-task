@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ProductService } from '@/services'
 import { ROUTES_NAME } from '@/utils'
-import type { Product } from '@/types/product'
+import { Product } from '@/types/product'
 import type { Response } from '@/types/app'
 
 /**
@@ -72,9 +72,11 @@ watch(
     <div v-if="loading" class="mx-auto w-full flex justify-center p-10 text-center">
       {{ t('loading') }}
     </div>
+
     <!-- Ready State -->
-    <div v-else class="grid grid-cols-2 border-l border-gray-200 lg:grid-cols-4 md:grid-cols-3 -mx-px sm:mx-0 dark:border-gray-500">
+    <div v-else class="grid grid-cols-1 border-l border-gray-200 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 -mx-px sm:mx-0 dark:border-gray-500">
       <div v-for="product in Products" :key="product.id" class="group relative border-b border-r border-gray-200 p-4 dark:border-gray-500 sm:p-6">
+        <!-- Details -->
         <div class="aspect-1 overflow-hidden rounded-lg bg-gray-200 dark:bg-gray-700 group-hover:opacity-75">
           <img :src="product.thumbnail" :alt="product.description" class="h-full w-full object-cover object-center">
         </div>
@@ -87,8 +89,33 @@ watch(
             {{ `${(+product.price).toLocaleString('en-GB')} $` }}
           </p>
         </div>
+
+        <!-- Actions -->
+        <div class="w-full flex items-center justify-center gap-2">
+          <!-- Add -->
+          <button
+            type="button"
+            class="relative flex grow items-center justify-center border border-transparent rounded-md bg-gray-100 px-8 py-2 text-sm text-gray-900 font-medium dark:bg-gray-800 hover:bg-gray-200 hover:bg-gray-900 dark:text-gray-100"
+            @click="useAppStore().addProduct(product)"
+          >
+            <Icon icon="solar:add-circle-line-duotone" class="mr-2 h-5 w-5" />
+            {{ t('add_to_cart') }}
+            <span class="ml-1.5 rounded bg-gray-300 px-1 font-bold dark:bg-gray-600">{{ useAppStore().selected_products.filter((p: typeof Product) => p.id === product.id)[0]?.quantity }}</span>
+          </button>
+
+          <!-- Remove -->
+          <button
+            v-if="useAppStore().selected_products.some((p: typeof Product) => p.id === product.id && !!p?.quantity)"
+            type="button"
+            class="relative flex items-center justify-center border border-transparent rounded-md bg-red-100 px-3 py-2 text-sm text-red-900 font-medium hover:bg-red-200"
+            @click="useAppStore().removeProduct(product)"
+          >
+            <Icon icon="solar:trash-bin-2-bold-duotone" class="h-5 w-5" />
+          </button>
+        </div>
       </div>
     </div>
+
     <!-- Pagination -->
     <nav class="flex items-center justify-center p-2">
       <span
