@@ -1,1 +1,1 @@
-export { ALL_LANGUAGES, LANGUAGE } from './constants'
+export { ALL_LANGUAGES, ROUTES_NAME } from './constants'

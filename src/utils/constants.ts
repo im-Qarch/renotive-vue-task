@@ -4,12 +4,13 @@
  * ?i know that you know but it is what it is :).
  */
 
-export const LANGUAGE: Record<string, string> = {
-  en: 'English',
-  fa: 'Persian - فارسی',
+export const ROUTES_NAME: Record<string, string> = {
+  DEFAULT: 'default',
+  PRODUCT_LIST: 'product-list',
+  NOTFOUND: 'not-found',
 }
 
 export const ALL_LANGUAGES: Record<string, string>[] = [
   { value: 'en', label: 'English' },
-  { value: 'fa', label: 'Persian - فارسی' },
+  { value: 'de', label: 'German' },
 ]

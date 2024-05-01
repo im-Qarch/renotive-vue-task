@@ -82,7 +82,7 @@ export default defineConfig({
         900: '#064E3B',
         950: '#022C22',
       },
-      secondary: {
+      red: {
         DEFAULT: '#F43F5E',
         50: '#FFF1F2',
         100: '#FFE4E6',

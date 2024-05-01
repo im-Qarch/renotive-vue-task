@@ -115,8 +115,5 @@ export default defineConfig({
       fullInstall: true,
       include: [path.resolve(__dirname, 'locales/**')],
     }),
-
-    // https://github.com/webfansplz/vite-plugin-vue-devtools
-    // VueDevTools(),
   ],
 })

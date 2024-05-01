@@ -14,6 +14,7 @@ declare module '@/plugins/icon.plugin';
 // set correct index for types
 declare module '@/types';
 declare module '@/types/app';
+declare module '@/types/product';
 // set correct index for stores
 declare module '@/stores';
 declare module '@/stores/store';
@@ -23,5 +24,10 @@ declare module '@/assets';
 declare module '@/composables';
 // set correct index for utils
 declare module '@/utils';
+// set correct index for services
+declare module '@/services';
+// set correct index for route
+declare module '@/router/router';
+declare module '@/router/routes';
 // set correct index for components and router
 declare module '@/components';
