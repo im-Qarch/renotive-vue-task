@@ -12,8 +12,8 @@ const routes: Array<RouteRecordRaw> = [
    */
   {
     name: ROUTES_NAME.DEFAULT,
-    path: '/',
-    redirect: '/product-list',
+    path: '/renotive-vue-task/',
+    redirect: '/renotive-vue-task/product-list',
     component: () => import('@/layouts/Default.vue'),
     children: [
       /**
@@ -21,7 +21,7 @@ const routes: Array<RouteRecordRaw> = [
        */
       {
         name: ROUTES_NAME.PRODUCT_LIST,
-        path: '/product-list',
+        path: '/renotive-vue-task/product-list',
         component: () => import('@/views/Product/Index.vue'),
       },
       /**
@@ -29,7 +29,7 @@ const routes: Array<RouteRecordRaw> = [
        */
       {
         name: ROUTES_NAME.SHOPPING_CART,
-        path: '/shopping-cart',
+        path: '/renotive-vue-task/shopping-cart',
         component: () => import('@/views/Cart/Index.vue'),
       },
     ],
