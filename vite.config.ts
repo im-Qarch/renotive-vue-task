@@ -54,7 +54,7 @@ export default defineConfig({
   },
 
   // for github-pages static deploy
-  base: '/renotive-vue-task/',
+  base: '/',
 
   plugins: [
     /**
