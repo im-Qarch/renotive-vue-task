@@ -95,7 +95,7 @@ watch(
           <!-- Add -->
           <button
             type="button"
-            class="relative flex grow items-center justify-center border border-transparent rounded-md bg-gray-100 px-8 py-2 text-sm text-gray-900 font-medium dark:bg-gray-800 hover:bg-gray-200 hover:bg-gray-900 dark:text-gray-100"
+            class="relative flex grow items-center justify-center border border-transparent rounded-md bg-gray-100 px-8 py-2 text-sm text-gray-900 font-medium dark:bg-gray-800 hover:bg-gray-200 dark:text-gray-100 dark:hover:bg-gray-900"
             @click="useAppStore().addProduct(product)"
           >
             <Icon icon="solar:add-circle-line-duotone" class="mr-2 h-5 w-5" />
@@ -121,8 +121,8 @@ watch(
       <span
         v-for="skip in Math.ceil(pagination?.total / pagination?.limit) || 1"
         :key="skip"
-        :class="{ 'bg-primary-200 hover:bg-primary-200': pagination.skip === skip }"
-        class="inline-flex cursor-pointer items-center bg-gray-100 px-4 py-2 text-sm text-gray-500 font-medium hover:bg-gray-200 hover:text-gray-700"
+        :class="{ 'dark:bg-primary-400 bg-primary-400 !text-white hover:bg-primary-400': pagination.skip === skip }"
+        class="inline-flex cursor-pointer items-center bg-gray-100 px-4 py-2 text-sm text-gray-500 font-medium dark:bg-gray-900 hover:bg-gray-200 hover:text-gray-700"
         @click="updatePage(skip)"
       >
         {{ skip }}
