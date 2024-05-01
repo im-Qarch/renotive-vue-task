@@ -2,12 +2,8 @@
 # like this when developer push or open merge request on branch dev
 # is the last check an monitoring code in development process
 # @link [see doc](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions)
-# TODO:
-# !we need add CD workflow for deployment flow
-# !but in private mode git i can't use pages to deploy the app
-# !if you want we can public the repo and check CD flow either
-
 name: CI
+
 on:
   push:
     branches:
