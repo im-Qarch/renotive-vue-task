@@ -26,5 +26,8 @@ declare module '@/composables';
 declare module '@/utils';
 // set correct index for services
 declare module '@/services';
+// set correct index for route
+declare module '@/router/router';
+declare module '@/router/routes';
 // set correct index for components and router
 declare module '@/components';
