@@ -53,6 +53,9 @@ export default defineConfig({
     },
   },
 
+  // for github-pages static deploy
+  base: '/renotive-vue-task/',
+
   plugins: [
     /**
      * Explore and extend more macros and syntax sugar to Vue.
