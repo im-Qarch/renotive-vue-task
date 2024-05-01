@@ -23,6 +23,7 @@
   ],
   "scripts": {
     "build": "vite build --mode prod",
+    "deploy": "gh-pages -d dist",
     "dev": "vite --port 3000",
     "lint": "eslint .",
     "preview": "vite preview",
@@ -65,6 +66,7 @@
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.56.0",
     "eslint-plugin-format": "^0.1.0",
+    "gh-pages": "^6.1.1",
     "https-localhost": "^4.7.1",
     "lint-staged": "^15.2.0",
     "naive-ui": "^2.38.1",
