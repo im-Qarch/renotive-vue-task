@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap"
       rel="stylesheet"
     />
+    <!-- VueUse -> Use Dark | check system preferred theme if not selected by user -->
     <script>
       ;(function () {
         const prefersDark =
@@ -19,6 +20,25 @@
         if (setting === 'dark' || (prefersDark && setting !== 'light'))
           document.documentElement.classList.toggle('dark', true)
       })()
+    </script>
+    <!-- Github Pages | Reload error resolved for make correct redirection in spa -->
+    <script type="text/javascript">
+      ;(function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search
+            .slice(1)
+            .split('&')
+            .map(function (s) {
+              return s.replace(/~and~/g, '&')
+            })
+            .join('?')
+          window.history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) + decoded + l.hash,
+          )
+        }
+      })(window.location)
     </script>
   </head>
   <body class="font-sans">
